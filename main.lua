@@ -25,6 +25,7 @@ function love.update()
 end
 
 function love.draw()
+    
     love.graphics.printf("FPS:" .. love.timer.getFPS(), love.graphics.newFont(16), 10, love.graphics.getHeight() - 30, love.graphics.getWidth())
 
     if game.state["running"] then
@@ -34,4 +35,5 @@ function love.draw()
     if not game.state["running"] then
         love.graphics.circle("fill", player.x, player.y, player.radius / 2)
     end
+
 end
